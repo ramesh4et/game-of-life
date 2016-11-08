@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <build>
         <plugins>
+                 
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
                 <artifactId>cargo-maven2-plugin</artifactId>
