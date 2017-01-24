@@ -11,4 +11,10 @@ mvnHome = tool 'Maven3'
      
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
     }
+ stage('Results') {
+      junit '**/target/surefire-reports/*.xml'
+}
+stage('Archive'){
+ archive '**/target/*.jar' 	
+}
 }
