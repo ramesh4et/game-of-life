@@ -9,7 +9,7 @@ mvnHome = tool 'Maven3'
  stage('Build') {
       // Run the maven build
      
-         sh "'${mvnHome}/bin/mvn' -B -U-Dmaven.test.failure.ignore clean package"
+         sh "'${mvnHome}/bin/mvn' -B -U -Dmaven.test.failure.ignore clean package"
          sh "'${mvnHome}/bin/mvn' -B -U javadoc:javadoc"
     }
  stage('Results') {
